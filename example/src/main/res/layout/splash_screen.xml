@@ -14,7 +14,7 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:layout_gravity="center"
-        android:src="@mipmap/logo_vone"
+        android:src="@drawable/logo_splash"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
 
