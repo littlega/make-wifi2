@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<array name="entries">
+		<item>@mipmap/topup</item>
+		<item>@mipmap/water</item>
+		<item>@mipmap/washing</item>
+	</array>
+	<array name="names">
+	    <item>เติมเงิน</item>
+	    <item>กดน้ำ</item>
+	    <item>ซักผ้า</item>
+	</array>
+</resources>

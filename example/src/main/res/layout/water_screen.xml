@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    >
+    <LinearLayout
+        android:id="@+id/BoxLeftRight"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="3"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_widthPercent="40%">
+
+        <ImageView
+            android:id="@+id/ClickStart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="wat_start"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/button_start" />
+
+        <ImageView
+            android:id="@+id/ClickStop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:onClick="wat_stop"
+            android:layout_weight="1"
+            android:src="@mipmap/button_stop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BoxLeftLeft"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:weightSum="3"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_widthPercent="35%">
+
+        <ImageView
+            android:id="@+id/LogoWater"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/logo_water" />
+
+        <Button
+            android:id="@+id/btn_Money"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/background_money"
+
+            android:textColor="@android:color/background_light"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/btn_Money2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/background_money"
+
+            android:textColor="@android:color/background_light"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/BackHome"
+        android:layout_height="wrap_content"
+        android:onClick="wat_main"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        percent:layout_widthPercent="25%"
+        android:src="@mipmap/b_blue_home" />
+</android.support.percent.PercentRelativeLayout>

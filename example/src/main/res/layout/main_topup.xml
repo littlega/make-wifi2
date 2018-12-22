@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:background="@mipmap/header_bg"
+        android:scaleType="fitCenter"
+        percent:layout_heightPercent="20%">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/logo" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColLeft"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Header"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerInside"
+            android:onClick="topup_network"
+            percent:srcCompat="@mipmap/menu1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColCenter"
+        android:layout_below="@+id/Header"
+        android:layout_toEndOf="@+id/ColLeft"
+        android:layout_toRightOf="@+id/ColLeft"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/menu2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight"
+        android:layout_below="@+id/Header"
+        android:layout_toEndOf="@+id/ColCenter"
+        android:layout_toRightOf="@+id/ColCenter"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerInside"
+            android:onClick="cards_main"
+            percent:srcCompat="@mipmap/menu3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColLeft2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ColLeft"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="4%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="1%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/menu4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColCenter2"
+        android:layout_above="@+id/Footer"
+        android:layout_toEndOf="@+id/ColLeft"
+        android:layout_toRightOf="@+id/ColLeft"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="4%"
+        percent:layout_marginTopPercent="1%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/menu5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight2"
+        android:layout_below="@+id/ColRight"
+        android:layout_toEndOf="@+id/ColCenter2"
+        android:layout_toRightOf="@+id/ColCenter2"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="4%"
+        percent:layout_marginTopPercent="1%"
+        percent:layout_widthPercent="30%">
+
+        <ImageView
+            android:id="@+id/Menu6"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/menu6" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%">
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_back" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="report_form"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_report" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="หน้าทดสอบ" />
+
+
+</android.support.percent.PercentRelativeLayout>

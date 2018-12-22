@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        percent:layout_heightPercent="20%">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/text_pro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ais"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Header"
+        android:gravity="center"
+        android:onClick="set_promotion_oper"
+        android:tag="1"
+        android:orientation="vertical"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="25%">
+
+
+        <ImageView
+
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/service1" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/Header"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:onClick="set_promotion_oper"
+        android:tag="3"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="25%">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/pro_true" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtac"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Header"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:onClick="set_promotion_oper"
+        android:tag="2"
+        percent:layout_heightPercent="30%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="25%">
+
+
+        <ImageView
+
+            android:id="@+id/img3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/pro_dtac"
+            android:scaleType="fitCenter" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%">
+
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:onClick="topup_main"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/blight_back" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:onClick="top_home"
+            android:layout_weight=".9"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="report_form"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_report" />
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

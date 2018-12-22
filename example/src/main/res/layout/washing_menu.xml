@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        percent:layout_widthPercent="65%"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0"
+        android:layout_alignParentStart="true"
+        android:gravity="left"
+        android:scaleType="fitStart"
+        percent:layout_heightPercent="15%">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/title_wash" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Header2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        percent:layout_widthPercent="35%"
+        percent:layout_marginRightPercent="2%"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        percent:layout_heightPercent="15%">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/btn_howto" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Header"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="7%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="20%">
+
+
+        <ImageView
+            android:id="@+id/Menu1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+
+            percent:srcCompat="@mipmap/machine1" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/Header"
+        percent:layout_marginTopPercent="29%"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="เครื่อง 1 ราคา XX บาท"
+        android:textColor="#130ccf"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="7%"
+        percent:layout_widthPercent="20%"
+        android:layout_alignBottom="@+id/Menu1"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 3 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_marginTopPercent="29%"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginBottomPercent="1%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColRight"
+        android:layout_alignStart="@+id/ColRight" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 4 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_marginTopPercent="29%"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_heightPercent="10%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColRight01"
+        android:layout_alignStart="@+id/ColRight01" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 2 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_marginTopPercent="29%"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_heightPercent="10%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColCenter"
+        android:layout_alignStart="@+id/ColCenter" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/Header"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="เครื่อง 5 ราคา XX บาท"
+        android:textColor="#130ccf"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginTopPercent="65%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="7%"
+        percent:layout_widthPercent="20%"
+        android:layout_alignBottom="@+id/Menu5"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 6 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_marginTopPercent="65%"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_heightPercent="10%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColCenter"
+        android:layout_alignStart="@+id/ColCenter" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 7 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_marginTopPercent="65%"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginBottomPercent="1%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColRight"
+        android:layout_alignStart="@+id/ColRight" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="เครื่อง 8 ราคา XX บาท"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#130ccf"
+        percent:layout_marginTopPercent="65%"
+        percent:layout_widthPercent="20%"
+        android:orientation="vertical"
+        percent:layout_heightPercent="10%"
+        android:layout_below="@+id/Header"
+        android:layout_alignLeft="@+id/ColRight01"
+        android:layout_alignStart="@+id/ColRight01" />
+
+    <LinearLayout
+        android:id="@+id/ColCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/Header"
+        android:layout_toEndOf="@+id/ColLeft"
+        android:layout_toRightOf="@+id/ColLeft"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/Header"
+        android:layout_toEndOf="@+id/ColCenter"
+        android:layout_toRightOf="@+id/ColCenter"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/Header"
+        android:layout_toEndOf="@+id/ColRight"
+        android:layout_toRightOf="@+id/ColRight"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColLeft01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ColLeft"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="7%"
+        percent:layout_marginTopPercent="7%"
+        percent:layout_widthPercent="20%">
+
+
+        <ImageView
+            android:id="@+id/Menu5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColCenter01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ColCenter"
+        android:layout_toEndOf="@+id/ColLeft"
+        android:layout_toRightOf="@+id/ColLeft"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="7%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu6"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight201"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ColRight"
+        android:layout_toEndOf="@+id/ColCenter"
+        android:layout_toRightOf="@+id/ColCenter"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="7%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu7"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColRight001"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ColRight"
+        android:layout_toEndOf="@+id/ColRight"
+        android:layout_toRightOf="@+id/ColRight"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="28%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginTopPercent="7%"
+        percent:layout_widthPercent="20%"
+        percent:layout_marginLeftPercent="2%">
+
+        <ImageView
+            android:id="@+id/Menu8"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="washing_number"
+            android:tag=""
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/machine3" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:onClick="top_home"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+
+    </LinearLayout>
+
+
+
+</android.support.percent.PercentRelativeLayout>
+

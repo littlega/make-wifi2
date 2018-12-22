@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="12%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ตั้งค่าระบบ"
+            android:textSize="58dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabletname000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/Header"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="SN"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabletname"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="45%"
+        android:layout_above="@+id/tabletname0001"
+        android:layout_toRightOf="@+id/tabletname000"
+        android:layout_toEndOf="@+id/tabletname000">
+
+        <EditText
+            android:id="@+id/txtSN"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:text="2i291caeteqvjdqlrym9iegvk4vdfg3f"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabletname01"
+        android:layout_below="@+id/tabletname"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="45%"
+        android:layout_toRightOf="@+id/tabletname0001"
+        android:layout_toEndOf="@+id/tabletname0001">
+
+        <EditText
+            android:id="@+id/txtTOKEN"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:text="205c36e3-9d6e-448d-8671-2ab7cd6551b5"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabletname0001"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tabletname000"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="TOKEN"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tabletname02"
+        android:layout_below="@id/tabletname01"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="45%"
+        android:layout_toRightOf="@+id/tabletname0002"
+        android:layout_toEndOf="@+id/tabletname0002">
+
+        <EditText
+            android:id="@+id/txtUSER"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tabletname0002"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tabletname0001"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="USER"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/tabletname02"
+        android:id="@+id/tabletname03"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="45%"
+        android:layout_toRightOf="@+id/tabletname0003"
+        android:layout_toEndOf="@+id/tabletname0003">
+
+        <EditText
+            android:id="@+id/txtPASS"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabletname0003"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tabletname0002"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="8%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="PASS"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom0003"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Header"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="0%"
+        percent:layout_widthPercent="30%">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:onClick="setting_hidekeyboard"
+        android:text="ซ่อน Keyboard"
+        android:theme="@style/ConfigButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom0004"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bottom0003"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="8%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="0%"
+        percent:layout_widthPercent="30%">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="setting_resetamt"
+            android:text="เคลียยอดเงินในตู้"
+            android:theme="@style/ConfigButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom0005"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bottom0004"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="8%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="0%"
+        percent:layout_widthPercent="30%">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="setting_device"
+            android:text="ตั้งค่าเครื่อง"
+            android:theme="@style/ConfigButton" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tabletname05"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tabletname03"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="0%"
+        percent:layout_widthPercent="30%">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="setting_save"
+            android:text="SAVE"
+            android:theme="@style/ConfigButton" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tabletname05"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="0%"
+        percent:layout_widthPercent="30%">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="setting_update"
+            android:text="โหลด โฆษณา"
+            android:theme="@style/ConfigButton" />
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        percent:layout_marginLeftPercent="10%"
+        percent:layout_marginTopPercent="10%"
+        percent:layout_widthPercent="38%"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/bottom0004"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/bottom">
+
+        <RadioButton
+            android:id="@+id/topup01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ตู้เติมเงิน"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/topup02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ตู้เติมเงิน + เมนู"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/topup03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ตู้เติมเงิน + ตู้น้ำ"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <CheckBox android:id="@+id/checkbox_closeads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ปิด โฆษณา"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/labelWater"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tabletname0003"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="10%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="จำนวนวิที่น้ำไหล"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/tabletname03"
+        android:id="@+id/tabletname04"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="4%"
+        percent:layout_widthPercent="45%"
+        android:layout_toRightOf="@+id/tabletname0003"
+        android:layout_toEndOf="@+id/tabletname0003">
+
+        <EditText
+            android:id="@+id/txtWATER"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%">
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="setting_exit"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/b_exit" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:visibility="gone"
+            android:onClick="setting_update_app"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/b_update" />
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

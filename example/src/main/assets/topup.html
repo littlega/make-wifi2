@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>m</title>
+    <link href="style.css?v=13" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.menu1 img { max-height: 30vh; border: 0px; }
+</style>
+</head>
+
+<body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+	function ajaxCheck(URLx,xdata){
+		var result=$.ajax({
+		   type: 'post',
+		   url: URLx,
+		   data: xdata,
+		   dataType: "html",
+		  async:false
+	   }).responseText;
+	   // alert(result);
+		return result;
+	}
+    var uuid = location.search.split('uuid=')[1]
+	ajaxCheck('file:///android_asset/topup.html?cmd=offcoin','');
+
+</script>
+<div class="container">
+    <div class="mheader">
+        <div class="mlogo"><a href="#" onClick="location.reload();"><img src="images/logo4.png" border="0" style="max-height: 19vh;"></a></div>
+    </div>
+    <div class="mbody">
+        <div style="width: 100vw; height: 33vh; margin: auto auto; padding-top: 9px;">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" width="96%">
+                <tr>
+                    <td width="33%" class="menu1" align="center" valign="middle" style="height: 34vh;"><a href="topup.php"><img src="images/design_2_2_menu1.png" style="max-width: 33vw;"></a></td>
+                    <td width="33%" class="menu1" align="center" valign="middle"><a href="pro.php"><img src="images/design_2_2_menu2.png" style="max-width: 33vw;"></a></td>
+                    <td width="33%" class="menu1" align="center" valign="middle"><a href="cards.php"><img src="images/design_2_2_menu3.png" style="max-width: 33vw;"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div style="width: 100vw; height: 35vh; margin: auto auto;">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" width="96%">
+                <tr>
+                    <td width="33%" class="menu1" align="center" valign="middle" style="height: 34vh;"><a href="billcat.php"><img src="images/design_2_2_menu4.png" style="max-width: 33vw;"></a></td>
+                    <td width="33%" class="menu1" align="center" valign="middle"><a href="stop.php"><img src="images/design_2_2_menu5.png" style="max-width: 33vw;"></a></td>
+                    <td width="33%" class="menu1" align="center" valign="middle"><a href="stop.php"><img src="images/design_2_2_menu6.png" style="max-width: 33vw;"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="mfooter">
+        <div style="width: 70%; margin: auto auto; padding-top: 8px;">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+                <tr>
+                    <td width="33%" align="left" class="footer-b"><a href="#" onclick="window.location = 'file:///android_asset/menu3d.html?uuid='+uuid;"><img src="images/b-back.png"></a></td>
+                    <td width="33%" align="center" class="footer-b"><a href="#" onclick="window.location = 'file:///android_asset/menu3d.html?uuid='+uuid;"><img src="images/b-home.png"></a></td>
+                    <td width="33%" align="right" class="footer-b"><a href="report.php"><img src="images/b-report.png"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="position: fixed; top: 0; right: 0;" id="divx_status"></div>
+<script>
+var status = ajaxCheck('https://cp.welovetopupline.com/api/get_web.php?uuid='+uuid+'&cmd=status','');
+function loop_data() {
+    $('#divx_status').html(status);
+}
+    setTimeout("loop_data()",3000);
+</script>
+</body>
+</html>

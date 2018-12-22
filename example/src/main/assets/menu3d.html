@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D</title>
+    <link rel="stylesheet" href="css/3d.css">
+    <link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+.mbody { background-image: url(images/bg_grey.png); background-size: 100% 100%; background-position: bottom 20vh center; background-repeat: no-repeat; }
+</style>
+</head>
+<style>
+.mheader { height: 20vh; position: fixed; top: 0; width: 100%; background-image: url(images/header-bg.jpg); background-size: 100% 100%;
+	box-shadow: 0px 1px 10px #333333;
+	}
+</style>
+<body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+    function ajaxLoad(URLx,xdata,Xdiv){
+		var result=$.ajax({
+		   type: 'post',
+		   url: URLx,
+		   data: xdata,
+		   dataType: "html",
+		  async:false
+	   }).responseText;
+	   // alert(result);
+		document.getElementById(Xdiv).innerHTML=result;
+	}
+	function ajaxCheck(URLx,xdata){
+		var result=$.ajax({
+		   type: 'post',
+		   url: URLx,
+		   data: xdata,
+		   dataType: "html",
+		  async:false
+	   }).responseText;
+	   // alert(result);
+		return result;
+	}
+	var uuid = location.search.split('uuid=')[1]
+
+	//var get = ajaxCheck('https://cp.welovetopupline.com/api/serial.php?uuid='+uuid+'&data=testjava','');
+
+</script>
+<div style="text-align: center; height: 20vh; position: fixed; top: 0; width: 100%; background-image: url(images/header-bg.jpg); background-size: 100% 100%; box-shadow: 0px 1px 10px #333333;"><img src="images/logo_vone.png" border="0" style="max-height: 19vh;"></div>
+
+<div id="wrap" style="margin-top: 15vh;">
+    <div id="showcase" class="noselect"> <a href="file:///android_asset/topup.html"><img class="cloud9-item" src="images/3d/topup2.png" alt="Mobile Topup"></a> <a href="file:///android_asset/menu3d.html?water"><img class="cloud9-item" src="images/3d/water.png" alt="Water"></a> <a href="file:///android_asset/menu3d.html?washing"><img class="cloud9-item" src="images/3d/washing.png" alt="Washing"></a> <a href="file:///android_asset/menu3d.html?airpump"><img class="cloud9-item" src="images/3d/airpump.png" alt="airpump"></a> <a href="file:///android_asset/menu3d.html?weight"><img class="cloud9-item" src="images/3d/weight.png" alt="weight"></a> </div>
+</div>
+
+<div class="mfooter" style="height: 10vh; position: fixed; bottom: 0; width: 100%; background-image: url(images/footer-bg.jpg); background-size: 100% 100%; box-shadow: 0px 1px 10px #333333;">
+    <div style="padding-top: 1vh; display: inline-block; float: left; margin-left: 1vw;">
+        <a href="file:///android_asset/menu3d.html?lang=th"><img src="images/flag_thai.png" style="height: 9vh; width: auto;"></a>
+    </div>
+    <div style="padding-top: 1vh; display: inline-block; float: left; margin-left: 1vw;">
+        <a href="file:///android_asset/menu3d.html?lang=mm"><img src="images/flag_myanmar.png" style="height: 9vh; width: auto;"></a>
+    </div>
+    <div style="padding-top: 1vh; display: inline-block; float: right; margin-right: 1vw;">
+        <img src="images/call_center.png" style="height: 8vh; width: auto;">
+    </div>
+</div>
+
+
+<div style="text-align: center; display: none;"><a href="../m" style="color: #fff;"><strong>HOME</strong></a></div>
+<div class="nav" class="noselect" style="display: none;">
+    <button class="left">  ← </button>
+    <button class="right"> → </button>
+</div>
+
+<script src="js/jquery.reflection.js"></script>
+<script src="js/jquery.cloud9carousel.js"></script>
+<script>
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.Cloud9Carousel( {
+        yPos: 42,
+        yRadius: 48,
+        mirrorOptions: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $(".nav > .left"),
+        buttonRight: $(".nav > .right"),
+        autoPlay: true,
+        bringToFront: true,
+        onRendered: showcaseUpdated,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function showcaseUpdated( showcase ) {
+        var title = $('#item-title').html(
+          $(showcase.nearestItem()).attr( 'alt' )
+        )
+
+        var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      // Simulate physical button click effect
+      $('.nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('.nav > .right').click()
+        }
+      } )
+    })
+  </script>
+
+</body>
+</html>

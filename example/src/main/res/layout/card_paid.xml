@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background12p">
+
+    <ImageView
+        android:id="@+id/topic"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/text_pay_white"
+        percent:layout_heightPercent="12%" />
+
+
+    <LinearLayout
+        android:id="@+id/text00"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topic"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="45%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:text="ซื้อบัตรให้กับหมายเลข"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/BoxNumber"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/text00"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="16%"
+        percent:layout_marginLeftPercent="4%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="45%">
+
+        <EditText
+            android:id="@+id/txtNumShow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:textColor="#0033cc"
+            android:gravity="center"
+            android:text=""
+            android:editable="false"
+            android:textAlignment="center"
+            android:textSize="46sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColLeft"
+        android:layout_below="@id/BoxNumber"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_heightPercent="40%"
+        percent:layout_marginBottomPercent="1%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="2%"
+        percent:layout_widthPercent="50%"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/Menu5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            percent:srcCompat="@mipmap/menu_topup_12call" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="12%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="บาท"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad2"
+        android:layout_toLeftOf="@id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="12%">
+
+        <EditText
+            android:id="@+id/txtFee"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:editable="false"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#0033cc"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad3"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/numpad2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="20%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ที่ต้องจ่าย"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad4"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="บาท"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad5"
+        android:layout_below="@id/numpad2"
+        android:layout_toLeftOf="@id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+
+        <EditText
+            android:id="@+id/txtRemain"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:textColor="#0033cc"
+            android:gravity="center"
+            android:text="0"
+            android:editable="false"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad6"
+        android:layout_below="@id/numpad3"
+        android:layout_toLeftOf="@id/numpad2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="20%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="เครดิตครั้งก่อน"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad7"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/numpad4"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="บาท"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad8"
+        android:layout_below="@id/numpad5"
+        android:layout_toLeftOf="@id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <EditText
+            android:id="@+id/txtInsert"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:textColor="#0033cc"
+            android:gravity="center"
+            android:text="0"
+            android:editable="false"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad9"
+        android:layout_below="@id/numpad6"
+        android:layout_toLeftOf="@id/numpad2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="20%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="ใส่เงินไปแล้ว"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad12"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/numpad7"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="บาท"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad11"
+        android:layout_below="@id/numpad8"
+        android:layout_toLeftOf="@id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <EditText
+            android:id="@+id/txtLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/box_number"
+            android:textColor="#0033cc"
+            android:gravity="center"
+            android:text="0"
+            android:editable="false"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad10"
+        android:layout_below="@id/numpad9"
+        android:layout_toLeftOf="@id/numpad2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginRightPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="20%">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="ยังขาดอยู่"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="card_number"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/blight_back" />
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

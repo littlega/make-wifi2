@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        percent:layout_heightPercent="15%">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.67"
+            android:src="@mipmap/text_cards_white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        percent:layout_heightPercent="75%"
+        percent:layout_marginTopPercent="15%"
+        percent:layout_marginLeftPercent="3%"
+        percent:layout_marginRightPercent="3%">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:onClick="set_card_oper"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/service5"
+                android:tag="5" />
+            <ImageView
+                android:id="@+id/menu15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:onClick="set_card_oper"
+                android:tag="15"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service15" />
+            <ImageView
+                android:id="@+id/menu16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:onClick="set_card_oper"
+                android:tag="16"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service16" />
+            <ImageView
+                android:id="@+id/menu17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:onClick="set_card_oper"
+                android:tag="17"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service17" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="18"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service18" />
+            <ImageView
+                android:id="@+id/menu19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="19"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service19" />
+            <ImageView
+                android:id="@+id/menu20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="20"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service20" />
+            <ImageView
+                android:id="@+id/menu21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="21"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service21" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="22"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service22" />
+            <ImageView
+                android:id="@+id/menu23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="23"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service23" />
+            <ImageView
+                android:id="@+id/menu24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="24"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service24" />
+            <ImageView
+                android:id="@+id/menu25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="25"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service25" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="26"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service26" />
+            <ImageView
+                android:id="@+id/menu27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="27"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service27" />
+            <ImageView
+                android:id="@+id/menu28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="28"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service28" />
+            <ImageView
+                android:id="@+id/menu29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="29"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service29" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:onClick="set_card_oper"
+                android:tag="30"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service30" />
+            <ImageView
+                android:id="@+id/menu31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="31"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service31" />
+            <ImageView
+                android:id="@+id/menu32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="32"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service32" />
+            <ImageView
+                android:id="@+id/menu33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="33"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service33" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="34"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service34" />
+            <ImageView
+                android:id="@+id/menu35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="35"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service35" />
+            <ImageView
+                android:id="@+id/menu36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="36"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service36" />
+            <ImageView
+                android:id="@+id/menu37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="37"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service37" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="38"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service38" />
+            <ImageView
+                android:id="@+id/menu39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="39"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service39" />
+            <ImageView
+                android:id="@+id/menu40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="40"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service40" />
+            <ImageView
+                android:id="@+id/menu41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="41"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service41" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="42"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/card_g" />
+            <ImageView
+                android:id="@+id/menu43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="43"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service43" />
+            <ImageView
+                android:id="@+id/menu44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="44"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service44" />
+            <ImageView
+                android:id="@+id/menu45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="45"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service45" />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="46"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service46" />
+            <ImageView
+                android:id="@+id/menu47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="47"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service47" />
+            <ImageView
+                android:id="@+id/menu48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="48"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service48" />
+            <ImageView
+                android:id="@+id/menu49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="49"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service49" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp">
+
+            <ImageView
+                android:id="@+id/menu50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="50"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service50" />
+            <ImageView
+                android:id="@+id/menu51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp" android:onClick="set_card_oper" android:tag="51"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/service51" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="topup_main"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/blight_back" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="report_form"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_report" />
+
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>m</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style>
+.menu-topup { width: 33vh; }
+.mbody { padding-top: 0; height: 100vh; background-image: url(images/bg_watching.jpg); background-size: 100% 100%; background-position: top center; }
+.menu1 { text-align: center; }
+</style>
+</head>
+
+<body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+    function ajaxLoad(URLx,xdata,Xdiv){
+		var result=$.ajax({
+		   type: 'post',
+		   url: URLx,
+		   data: xdata,
+		   dataType: "html",
+		  async:false
+	   }).responseText;
+	   // alert(result);
+		document.getElementById(Xdiv).innerHTML=result;
+	}
+	function ajaxCheck(URLx,xdata){
+		var result=$.ajax({
+		   type: 'post',
+		   url: URLx,
+		   data: xdata,
+		   dataType: "html",
+		  async:false
+	   }).responseText;
+	   // alert(result);
+		return result;
+	}
+	var uuid = location.search.split('uuid=')[1]
+
+	//var get = ajaxCheck('https://cp.welovetopupline.com/api/serial.php?uuid='+uuid+'&data=testjavawash','');
+
+</script>
+
+<div class="container">
+    <div class="mbody">
+    	<div style="margin: auto auto; padding-top: 10vh">
+        	<div style="text-align: center;"><a href="#" onclick="window.location = 'file:///android_asset/menu3d.html?uuid='+uuid;"><img src="images/text_washing.png" border="0" style="height: 70vh; border: 0px; " class="pb10"></a></div>
+        </div>
+    </div>
+
+<div class="cartoon" style="position: fixed; bottom: 0; padding-bottom: 0vh; text-align: center; display: block; right: 0;"><img src="images/pipo2.gif" style="width: 30vw;" onClick="alert('What Z up');"></div>
+
+</body>
+</html>

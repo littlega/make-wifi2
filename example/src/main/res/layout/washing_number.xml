@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background12p">
+
+
+    <LinearLayout
+        android:id="@+id/numpad1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="top_num"
+            android:tag="1"
+            android:text="1"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad2"
+        android:layout_toEndOf="@+id/numpad1"
+        android:layout_toRightOf="@+id/numpad1"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="top_num"
+            android:tag="2"
+            android:text="2"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad3"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/numpad2"
+        android:layout_toRightOf="@+id/numpad2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="3"
+            android:onClick="top_num"
+            android:tag="3"
+            android:theme="@style/NumberButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/numpad1"
+        android:layout_toEndOf="@id/numpad1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="4"
+            android:onClick="top_num"
+            android:tag="4"
+            android:theme="@style/NumberButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad5"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/numpad2"
+        android:layout_toEndOf="@+id/numpad4"
+        android:layout_toRightOf="@+id/numpad4"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="5"
+            android:onClick="top_num"
+            android:tag="5"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad6"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/numpad3"
+        android:layout_toEndOf="@+id/numpad5"
+        android:layout_toRightOf="@+id/numpad5"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="6"
+            android:onClick="top_num"
+            android:tag="6"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad7"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/numpad4"
+        android:layout_toEndOf="@+id/numpad6"
+        android:layout_toRightOf="@+id/numpad6"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="5%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="7"
+            android:onClick="top_num"
+            android:tag="7"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad8"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/numpad5"
+        android:layout_toEndOf="@+id/numpad7"
+        android:layout_toRightOf="@+id/numpad7"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="8"
+            android:onClick="top_num"
+            android:tag="8"
+            android:theme="@style/NumberButton" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numpad9"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/numpad6"
+        android:layout_toEndOf="@+id/numpad8"
+        android:layout_toRightOf="@+id/numpad8"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="2%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="9"
+            android:onClick="top_num"
+            android:tag="9"
+            android:theme="@style/NumberButton" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numpad0"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/numpad8"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="15%"
+        percent:layout_marginLeftPercent="19%"
+        percent:layout_marginTopPercent="3%"
+        percent:layout_widthPercent="12%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="0"
+            android:onClick="top_num"
+            android:tag="0"
+            android:theme="@style/NumberButton" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/BoxNumber"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="16%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="17%"
+        percent:layout_widthPercent="45%">
+
+        <EditText
+            android:id="@+id/txtNum"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:editable="false"
+            android:background="@drawable/box_number"
+            android:textColor="#0033cc"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="46sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/field3"
+        android:layout_below="@+id/field2"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="19%">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/b_backspace"
+            android:onClick="top_del_one"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/field4"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="10%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="19%"
+        android:layout_below="@+id/field2"
+        android:layout_alignLeft="@+id/field2"
+        android:layout_alignStart="@+id/field2">
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/b_del"
+            android:onClick="top_del_all"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/field2"
+        android:layout_below="@+id/BoxNumber"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        percent:layout_heightPercent="20%"
+        percent:layout_marginRightPercent="5%"
+        percent:layout_marginTopPercent="5%"
+        percent:layout_widthPercent="45%">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_selector"
+            android:onClick="washing_confirm"
+            android:text="ยืนยัน"
+            android:textColor="#000000"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="wash_main"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/blight_back" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="report_form"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_report" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/topic"
+        android:layout_width="wrap_content"
+        percent:srcCompat="@mipmap/text_number"
+        percent:layout_heightPercent="12%"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/body_bg">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        percent:layout_heightPercent="30%"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/text_topup_success"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/text001"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        percent:layout_marginTopPercent="2%"
+        android:gravity="center"
+        percent:layout_heightPercent="15%"
+        android:layout_below="@+id/Header">
+
+        <ImageView
+            android:id="@+id/tititi"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/text_topup_success4" />
+
+        <EditText
+            android:id="@+id/credit_left"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tititi"
+            android:background="@drawable/box_number"
+            android:onClick="top_num"
+            android:tag="2"
+            android:textColor="#0033cc"
+            android:textStyle="bold"
+            android:text="0"
+            android:textSize="46sp"
+            android:gravity="center"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mass"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text001"
+        android:gravity="center"
+        percent:layout_heightPercent="20%"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="93dp"
+            percent:srcCompat="@mipmap/text_topup_success3"
+            percent:layout_heightPercent="12%"
+            android:layout_weight="0.40" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/thx"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        percent:layout_heightPercent="20%"
+        android:weightSum="1"
+        android:layout_above="@+id/Footer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="123dp"
+            android:background="@mipmap/text_topup_success2"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/footer_bg"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        percent:layout_heightPercent="10%">
+
+        <ImageView
+            android:id="@+id/BackB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_back" />
+
+        <ImageView
+            android:id="@+id/BackHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="top_home"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_home" />
+
+        <ImageView
+            android:id="@+id/BackReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".9"
+            android:onClick="report_form"
+            android:scaleType="fitCenter"
+            percent:srcCompat="@mipmap/blight_report" />
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>
