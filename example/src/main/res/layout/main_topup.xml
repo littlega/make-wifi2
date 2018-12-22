@@ -45,7 +45,7 @@
         percent:layout_widthPercent="30%">
 
         <ImageView
-            android:id="@+id/Menu5"
+            android:id="@+id/Menu1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:onClick="topup_network"

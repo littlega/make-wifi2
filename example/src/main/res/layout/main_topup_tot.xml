@@ -90,7 +90,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@android:color/transparent"
-        android:onClick="cards_main"
+        android:onClick="cards_tot"
         android:scaleType="fitCenter"
         android:src="@drawable/wifi_bg"
         app:layout_constraintBottom_toBottomOf="parent"

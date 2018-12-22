@@ -3584,6 +3584,11 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(mContext,"Cards",Toast.LENGTH_LONG).show();
         setContentView(R.layout.bill_list);
     }
+    public void cards_tot(View view) {
+        setContentView(R.layout.main_topup);
+        coin_control(0);
+        resetDisconnectTimer();
+    }
     public void cards_main(View view) {
         //Toast.makeText(mContext,"Cards",Toast.LENGTH_LONG).show();
         setContentView(R.layout.cards_screen);
