@@ -542,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
     private String sendPing(String longitude,String latitude){
         //String link="https://member.welovetopupline.com/api/get_web.php?cmd=ping&uuid="+app_uuid+"&lat="+latitude+"&long="+longitude+"&status="+usb_connect;
         String status_detail = "B:"+usb_connect+"("+app_version+")";
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=command","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&data1="+status_detail);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=command","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&data1="+status_detail);
         return "".toString();
     }
     public static final int BUFFER_SIZE = 2048;
@@ -901,7 +901,7 @@ public class MainActivity extends AppCompatActivity {
                 myDir.mkdirs();
             }
 
-            String mainUrl = "https://www.v-onetopup.com/system/upload/ads/";
+            String mainUrl = "https://www.totpayonline.com/system/upload/ads/";
             String downloadFileName = downloadUrl.replace(mainUrl, "");
             File outputFile = new File(myDir, downloadFileName);
             if (!outputFile.exists()) {
@@ -928,7 +928,7 @@ public class MainActivity extends AppCompatActivity {
         return "";
     }
     private String getMachineFromUrl(){
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         String[] separated = jsonString.split(",");
         if(separated[0].contains("1")){
             if(separated[6].contains("open")){
@@ -1253,7 +1253,7 @@ public class MainActivity extends AppCompatActivity {
                                             }
                                         }
                                         if (app_api_false == 1) {
-                                            String jsonString = sentDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=mobiletopup2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + app_api_ref + "&coinbanknote=" + app_api_coin);
+                                            String jsonString = sentDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=mobiletopup2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + app_api_ref + "&coinbanknote=" + app_api_coin);
                                             app_api_false = 0;
                                             Toast.makeText(mContext, "Topup done.", Toast.LENGTH_LONG).show();
                                         }
@@ -1474,7 +1474,7 @@ public class MainActivity extends AppCompatActivity {
 
                                             if (topup_count == 4) {
                                                 app_api_false = 0;
-                                                String jsonString = sentDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=mobiletopup2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
+                                                String jsonString = sentDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=mobiletopup2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
                                                 app_api_coin = coin_data_int;
                                                 app_api_ref = transaction_id;
                                                 int topup_status = (coin_data_int + app_remain) - app_total;
@@ -1550,7 +1550,7 @@ public class MainActivity extends AppCompatActivity {
                                         if (amt_left <= 0) {
                                             topup_count++;
                                             if (topup_count == 4) {
-                                                String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=topupcard2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
+                                                String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=topupcard2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
                                                 int topup_status = (coin_data_int + app_remain) - app_total;
                                                 if (topup_status == 0) {
                                                     setContentView(R.layout.topup_success);
@@ -1676,7 +1676,7 @@ public class MainActivity extends AppCompatActivity {
                                         if (amt_left <= 0) {
                                             topup_count++;
                                             if (topup_count == 4) {
-                                                String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=payment2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
+                                                String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=payment2", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN + "&transaction_id=" + transaction_id + "&coinbanknote=" + coin_data_int);
                                                 double topup_status = (coin_data_int + app_remain) - app_bill_total;
 
                                                 if (topup_status == 0) {
@@ -2052,7 +2052,7 @@ public class MainActivity extends AppCompatActivity {
                 mPlayer.start();
             }
 
-            String get_topup1 = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=payment1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_oper+"&mobile_number="+app_number+"&price="+bill_amt+"&data1="+bill_ref1+"&data2="+bill_ref2+"&data3="+bill_ref3+"&data4="+bill_ref4);
+            String get_topup1 = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=payment1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_oper+"&mobile_number="+app_number+"&price="+bill_amt+"&data1="+bill_ref1+"&data2="+bill_ref2+"&data3="+bill_ref3+"&data4="+bill_ref4);
             if (TextUtils.isEmpty(get_topup1)) {
                 setContentView(R.layout.main_screen);
             }else {
@@ -2176,7 +2176,7 @@ public class MainActivity extends AppCompatActivity {
                 mPlayer.start();
             }
 
-            String get_topup1 = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=topupcard1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_card_oper+"&mobile_number="+app_number+"&price="+app_amt);
+            String get_topup1 = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=topupcard1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_card_oper+"&mobile_number="+app_number+"&price="+app_amt);
             if (TextUtils.isEmpty(get_topup1)) {
                 setContentView(R.layout.main_screen);
             }else {
@@ -2239,7 +2239,7 @@ public class MainActivity extends AppCompatActivity {
                 mPlayer.start();
             }
 
-            String get_topup1 = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=mobiletopup1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_oper+"&mobile_number="+app_number+"&price="+app_amt);
+            String get_topup1 = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=mobiletopup1","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&service_id="+app_oper+"&mobile_number="+app_number+"&price="+app_amt);
             if (TextUtils.isEmpty(get_topup1)) {
                 setContentView(R.layout.main_screen);
             }else {
@@ -2300,7 +2300,7 @@ public class MainActivity extends AppCompatActivity {
         String frm_number = textNum.getText().toString();
         if(frm_number.length()==10){
             setContentView(R.layout.report_success);
-            getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=contact","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&data1=2&mobile_number="+frm_number);
+            getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=contact","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN+"&data1=2&mobile_number="+frm_number);
         }else{
             Toast.makeText(mContext,"กรุณากรอกตัวเลขให้ถูกต้อง",Toast.LENGTH_LONG).show();
         }
@@ -2484,7 +2484,7 @@ public class MainActivity extends AppCompatActivity {
             textW10.setText(String.valueOf(prefs.getInt("topupepay_wash10" , 0)));
             textPump.setText(String.valueOf(prefs.getInt("topupepay_airpump" , 0)));
 
-            String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+            String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
             String[] separated1 = jsonString.split(",");
             if(separated1[0].contains("1")) {
                 if (separated1[6].contains("open")) {
@@ -2682,7 +2682,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cp.welovetopupline.com/m/usb"+jsonString+".apk"));
         //startActivity(browserIntent);
 
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=ads_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=ads_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(jsonString)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -2751,7 +2751,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(browserIntent);
     }
     public void setting_resetamt(View view) {
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=reset","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=reset","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         app_startup();
     }
     public void setting_device(View view) {//#new
@@ -2887,7 +2887,7 @@ public class MainActivity extends AppCompatActivity {
 
         Imageview_Status(0,Menu99);
 
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=topup_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=topup_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(jsonString)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -2931,7 +2931,7 @@ public class MainActivity extends AppCompatActivity {
             MediaPlayer mPlayer = MediaPlayer.create(getBaseContext(), R.raw.amt);
             mPlayer.start();
         }
-        String topup_get_amt = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=topup_amt_request","id="+app_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String topup_get_amt = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=topup_amt_request","id="+app_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(topup_get_amt)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -3051,7 +3051,7 @@ public class MainActivity extends AppCompatActivity {
     public void set_card_oper(View view) {
         String oper = view.getTag().toString();
         app_card_oper = oper;
-        String card_get_amt = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=card_amt_request","id="+app_card_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String card_get_amt = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=card_amt_request","id="+app_card_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(card_get_amt)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -3236,7 +3236,7 @@ public class MainActivity extends AppCompatActivity {
             MediaPlayer mPlayer = MediaPlayer.create(getBaseContext(), R.raw.amt);
             mPlayer.start();
         }
-        String topup_get_amt = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=topup_amt_request","id="+app_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String topup_get_amt = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=topup_amt_request","id="+app_oper+"&username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(topup_get_amt)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -3401,7 +3401,7 @@ public class MainActivity extends AppCompatActivity {
         if(isInternetAvailable()) {
             String amt = view.getTag().toString();
             app_amt = Integer.parseInt(amt);
-            String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN);
+            String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine", "username=" + storedPreferenceUsername + "&token=" + storedPreferenceToken + "&sn=" + storedPreferenceSN);
             String[] separated = jsonString.split("user");
             String[] separated2 = separated[1].split("credits");
             String[] separated3 = separated2[1].split("\"");
@@ -3432,7 +3432,7 @@ public class MainActivity extends AppCompatActivity {
         coin_control(0);
         String amt = view.getTag().toString();
         app_amt = Integer.parseInt(amt);
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         String[] separated = jsonString.split("user");
         String[] separated2 = separated[1].split("credits");
         String[] separated3 = separated2[1].split("\"");
@@ -3459,7 +3459,7 @@ public class MainActivity extends AppCompatActivity {
         }else {
             app_card_oper = oper;
         }
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(jsonString)) {
             setContentView(R.layout.main_screen);
         }else {
@@ -3499,7 +3499,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(mContext,"กรุณากรอกตัวเลข",Toast.LENGTH_LONG).show();
         }else {
             bill_amt = Double.parseDouble(amt);
-            String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+            String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=machine","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
             if (TextUtils.isEmpty(jsonString)) {
                 setContentView(R.layout.main_screen);
             }else {
@@ -3628,7 +3628,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView Menu51 = (ImageView)findViewById(R.id.menu51);
 
 
-        String jsonString = getDataFromUrl("https://www.v-onetopup.com/system/api.php?cmd=card_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
+        String jsonString = getDataFromUrl("https://www.totpayonline.com/system/api.php?cmd=card_request","username="+storedPreferenceUsername+"&token="+storedPreferenceToken+"&sn="+storedPreferenceSN);
         if (TextUtils.isEmpty(jsonString)) {
             setContentView(R.layout.main_screen);
         }else {
