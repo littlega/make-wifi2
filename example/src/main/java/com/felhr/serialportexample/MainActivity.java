@@ -3586,6 +3586,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void cards_tot(View view) {
         setContentView(R.layout.main_topup);
+        app_card_oper = "23";
         coin_control(0);
         resetDisconnectTimer();
     }

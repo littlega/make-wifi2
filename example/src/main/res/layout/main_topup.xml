@@ -43,7 +43,8 @@
             android:id="@+id/Menu1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:onClick="topup_network"
+            android:onClick="set_card_amt"
+            android:tag="50"
             android:scaleType="centerInside"
             android:background="@drawable/tot50" />
 
@@ -64,9 +65,9 @@
             android:id="@+id/Menu2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-
+            android:onClick="set_card_amt"
             android:scaleType="fitCenter"
-
+            android:tag="100"
             android:background="@drawable/tot100"/>
 
     </LinearLayout>
@@ -87,7 +88,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="centerInside"
-            android:onClick="cards_main"
+            android:onClick="set_card_amt"
+            android:tag="200"
             android:background="@drawable/tot200" />
 
     </LinearLayout>
@@ -109,6 +111,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitCenter"
+            android:onClick="set_card_amt"
+            android:tag="300"
             android:background="@drawable/tot300" />
 
     </LinearLayout>
@@ -128,6 +132,8 @@
             android:id="@+id/Menu5"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:onClick="set_card_amt"
+            android:tag="500"
             android:scaleType="fitCenter"
             android:background="@drawable/tot500" />
 
@@ -148,6 +154,8 @@
             android:id="@+id/Menu6"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:onClick="set_card_amt"
+            android:tag="1000"
             android:scaleType="fitCenter"
             android:background="@drawable/tot1000" />
 
