@@ -336,7 +336,7 @@
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@mipmap/footer_bg"
+        android:background="#005F95"
         android:orientation="horizontal"
         android:weightSum="3"
         android:baselineAligned="false"

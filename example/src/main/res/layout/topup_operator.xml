@@ -311,7 +311,7 @@
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@mipmap/footer_bg"
+        android:background="#005F95"
         android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal"
