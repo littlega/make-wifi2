@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_tot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_bg">
@@ -32,18 +32,16 @@
 
         <TextView
             android:id="@+id/title_top"
-            android:layout_width="832dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily=""
             android:gravity="center_horizontal"
             android:onClick="report_form"
             android:text="เลือกบริการ | Choose Service"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
 
         <ImageButton
             android:id="@+id/back2"
@@ -56,9 +54,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </LinearLayout>
-
 
 
     <TextView
@@ -87,8 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            app:backgroundTint="#ffffff"
-            app:srcCompat="@drawable/mobile_topup" />
+            app:srcCompat="@drawable/menu_tot1" />
 
         <ImageButton
             android:onClick="cards_tot"
@@ -97,8 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            app:backgroundTint="#ffffff"
-            app:srcCompat="@drawable/mobile_tot" />
+            app:srcCompat="@drawable/menu_tot2" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
