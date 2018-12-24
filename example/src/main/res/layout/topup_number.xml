@@ -397,7 +397,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimaryDark">
-
         <ImageView
             android:id="@+id/topic"
             android:layout_width="match_parent"

@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/body_bg">
+    android:background="@drawable/bg">
 
     <LinearLayout
         android:id="@+id/Header"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         percent:layout_heightPercent="30%"
         android:orientation="horizontal">
 
