@@ -19,8 +19,18 @@
         android:scaleType="fitCenter"
         percent:layout_heightPercent="10%">
 
-
-
+        <TextView
+            android:id="@+id/title_top"
+            android:text="เลือกซื้อตามราคา | Select card to purchase."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="report_form"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
 
     </LinearLayout>
 
@@ -29,13 +39,11 @@
         android:layout_below="@+id/Header"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="130dp"
-        android:layout_marginLeft="130dp"
+        percent:layout_marginLeftPercent="3%"
         android:layout_marginTop="11dp"
         android:orientation="vertical"
         percent:layout_heightPercent="30%"
         percent:layout_marginBottomPercent="1%"
-        percent:layout_marginLeftPercent="5%"
         percent:layout_marginTopPercent="8%"
         percent:layout_widthPercent="30%">
 
@@ -43,16 +51,18 @@
             android:id="@+id/Menu1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:background="@drawable/tot50"
             android:onClick="set_card_amt"
-            android:tag="50"
             android:scaleType="centerInside"
-            android:background="@drawable/tot50" />
+            android:tag="50" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ColCenter"
         android:layout_below="@+id/Header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_toEndOf="@+id/ColLeft"
         android:layout_toRightOf="@+id/ColLeft"
         android:orientation="vertical"
@@ -65,10 +75,10 @@
             android:id="@+id/Menu2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:background="@drawable/tot100"
             android:onClick="set_card_amt"
             android:scaleType="fitCenter"
-            android:tag="100"
-            android:background="@drawable/tot100"/>
+            android:tag="100" />
 
     </LinearLayout>
 
@@ -102,8 +112,8 @@
         android:orientation="vertical"
         percent:layout_heightPercent="30%"
         percent:layout_marginBottomPercent="4%"
-        percent:layout_marginLeftPercent="5%"
-        percent:layout_marginTopPercent="1%"
+        percent:layout_marginLeftPercent="3%"
+        percent:layout_marginTopPercent="2%"
         percent:layout_widthPercent="30%">
 
         <ImageView
@@ -120,22 +130,24 @@
     <LinearLayout
         android:id="@+id/ColCenter2"
         android:layout_below="@+id/ColRight"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_toEndOf="@+id/ColLeft"
         android:layout_toRightOf="@+id/ColLeft"
         android:orientation="vertical"
         percent:layout_heightPercent="30%"
         percent:layout_marginBottomPercent="4%"
-        percent:layout_marginTopPercent="1%"
+        percent:layout_marginTopPercent="2%"
         percent:layout_widthPercent="30%">
 
         <ImageView
             android:id="@+id/Menu5"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:background="@drawable/tot500"
             android:onClick="set_card_amt"
-            android:tag="500"
             android:scaleType="fitCenter"
-            android:background="@drawable/tot500" />
+            android:tag="500" />
 
     </LinearLayout>
 
@@ -147,7 +159,7 @@
         android:orientation="vertical"
         percent:layout_heightPercent="30%"
         percent:layout_marginBottomPercent="4%"
-        percent:layout_marginTopPercent="1%"
+        percent:layout_marginTopPercent="2%"
         percent:layout_widthPercent="30%">
 
         <ImageView
@@ -222,7 +234,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="หน้าทดสอบ" />
+        android:text="หน้าทดสอบ"
+        android:visibility="gone"/>
 
 
 </android.support.percent.PercentRelativeLayout>

@@ -4,13 +4,14 @@
     android:id="@+id/main_tot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg">
+    android:background="@drawable/bg">
 
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:background="#005F95"
+        android:elevation="4dp"
+        android:background="@drawable/topbar"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,19 +27,20 @@
             android:scaleType="fitCenter"
             android:src="@drawable/left_arrow"
             android:visibility="invisible"
+            android:elevation="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/title_top"
+            android:text="เลือกบริการ | Choose Service."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:onClick="report_form"
-            android:text="เลือกบริการ | Choose Service"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="35sp" />
@@ -64,6 +66,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:textColor="@color/colorAccent"
         android:text="หน้าทดสอบ" />
 
     <LinearLayout
@@ -83,6 +87,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="6dp"
+            android:outlineProvider="bounds"
+            style="@style/AppTheme.NatButton2"
             app:srcCompat="@drawable/menu_tot1" />
 
         <ImageButton
@@ -92,6 +101,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
             app:srcCompat="@drawable/menu_tot2" />
     </LinearLayout>
 

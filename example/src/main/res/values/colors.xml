@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#005F95</color>
     <color name="colorAccent">#03F2F5</color>
 
+    <color name="colorWhite">#ffffff</color>
+
     <color name="line_menu">#0033cc</color>
     <color name="text_menu">#000000</color>
     <color name="text_menu_cancel">#FF0000</color>

@@ -37,4 +37,16 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+    <style name="AppTheme.NatButton">
+        <item name="colorControlHighlight">#ff00ff</item>
+        <item name="colorButtonNormal">@color/colorWhite</item>
+        <item name="android:background">@drawable/rounded_shape</item>
+    </style>
+
+    <style name="AppTheme.NatButton2" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
 </resources>
